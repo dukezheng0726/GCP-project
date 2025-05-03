@@ -1,0 +1,1 @@
+CREATE TABLE IF NOT EXISTS grade (course VARCHAR(255), grade INT);INSERT INTO grade (course, grade) VALUES ('DevOps', 84);INSERT INTO grade (course, grade) VALUES ('AWS Solutions Architecture', 90);INSERT INTO grade (course, grade) VALUES ('Linux Fundamentals', 95);
