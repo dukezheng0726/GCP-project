@@ -1,12 +1,9 @@
-/*
+
 module "dns" {
   source        = "./modules/dns"
-
-  lb_ip_address = module.lb.lb_ip
+  domain_ip = module.web_lb.web_lb_ip
 }
 
-
-*/
 module "sql" {
   source = "./modules/sql"
 }

@@ -1,4 +1,4 @@
-resource "google_compute_health_check" "internal_hc" {
+resource "google_compute_region_health_check" "internal_hc" {
   name                = "${var.name_prefix}-internal-hc"
   check_interval_sec  = 5
   timeout_sec         = 5
@@ -12,7 +12,7 @@ resource "google_compute_health_check" "internal_hc" {
 
 resource "google_compute_region_backend_service" "internal_backend" {
   name                  = "${var.name_prefix}-internal-backend"
-  health_checks         = [google_compute_health_check.internal_hc.self_link]
+  health_checks         = [google_compute_region_health_check.internal_hc.self_link]
   protocol              = "HTTP"
   load_balancing_scheme = "INTERNAL_MANAGED"
   region                = var.region

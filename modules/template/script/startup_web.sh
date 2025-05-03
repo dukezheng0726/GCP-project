@@ -76,7 +76,7 @@ print("Content-Type: application/json\n")
 
 try:
     # 从Flask获取数据
-    with urllib.request.urlopen("http://${lb_app_ip}") as response:
+    with urllib.request.urlopen("http://${lb_app_ip}/api") as response:
         raw_data = response.read().decode('utf-8').strip()
     
     # 解析Python元组数据
