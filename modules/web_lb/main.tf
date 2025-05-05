@@ -18,7 +18,7 @@ resource "google_compute_backend_service" "external_backend" {
   load_balancing_scheme = "EXTERNAL_MANAGED"
 
   backend {
-    group           = var.instance_group_app
+    group           = var.instance_group_web
     balancing_mode  = "UTILIZATION"
     capacity_scaler = 1.0
   }
