@@ -15,12 +15,6 @@ variable "name_prefix" {
   type        = string
 }
 
-variable "instance_group_app" {
+variable "instance_group_web" {
   type = string
 }
-
-/*
-variable "instance_group_web" {
-  type        = string
-}
-*/
