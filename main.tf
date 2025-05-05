@@ -64,7 +64,7 @@ module "web_mig" {
 module "web_lb" {
   source             = "./modules/web_lb"
   name_prefix        = "web"
-  instance_group_app = module.web_mig.instance_group
+  instance_group_web = module.web_mig.instance_group
   region             = var.region
   network            = var.network
   subnetwork         = var.subnetwork
